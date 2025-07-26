@@ -1,6 +1,6 @@
 {
-  "name": "node-bff-admin-cakes",
-  "aplicacao": "node-bff-admin-cakes",
+  "name": "node-bff-website-cakes",
+  "aplicacao": "node-bff-website-cakes",
   "private": "true",
   "version": "0.0.1",
   "license": "UNLICENSED",
