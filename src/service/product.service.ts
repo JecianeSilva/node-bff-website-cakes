@@ -16,6 +16,9 @@ export class ProductService implements IProductService {
 
   async getProducts(queryParams: TGetProductQueryParams): Promise<TGetProductsResponse> {
     const data = await this.productsClient.getProducts(queryParams)
-    return mapperProducts(data as IProduct[])
+    return {
+      ... data, 
+      data: mapperProducts(data.data as IProduct[])
+    }
   }
 }
