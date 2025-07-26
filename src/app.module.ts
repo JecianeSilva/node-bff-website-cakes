@@ -13,13 +13,13 @@ import { CategoryController } from './controllers/category.controller';
 
 import { HttpClientService } from './service/http-client.service';
 import { HttpServiceInterceptor } from './middlewares/interceptor';
-import config from './config/config';
+import CONFIG from './config/config';
 
 @Module({
   imports: [
     HttpModule,
     ConfigModule.forRoot({
-      load: [config],
+      load: [() => CONFIG],
     }),
   ],
   controllers: [
